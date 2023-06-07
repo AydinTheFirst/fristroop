@@ -1,0 +1,108 @@
+<div
+	class="offcanvas offcanvas-start bg-dark-subtle"
+	tabindex="-1"
+	id="sidebar"
+	style="width: 280px">
+	<div class="offcanvas-header border-bottom">
+		<div>
+			<%- include("brand.ejs") %>
+		</div>
+		<div></div>
+		<div>
+			<button
+				type="button"
+				class="btn fs-4"
+				data-bs-dismiss="offcanvas"
+				aria-label="Close">
+				<i class="fa-solid fa-xmark green"></i>
+			</button>
+		</div>
+	</div>
+	<div class="offcanvas-body p-0 mt-2">
+		<ul class="nav flex-column">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-house mx-1"></i>
+					Home
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-search mx-1"></i>
+					About Us
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-gear mx-1"></i>
+					Our Services
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-user-group mx-1"></i>
+					Our Team
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-briefcase mx-1"></i>
+					References
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fa-solid fa-phone mx-1"></i>
+					Contact
+				</a>
+			</li>
+		</ul>
+
+		<div
+			class="position-absolute bottom-0 bg-secondary-subtle w-100 p-3 border-top">
+			<i class="fa-solid fa-clock"></i>
+			<span id="date" class="text-center"></span>
+			<script>
+				const date = document.getElementById("date");
+				const setTime = () => {
+					const now = Date.now();
+					const time = new Date(now).toLocaleString();
+					date.innerHTML = time;
+				};
+				setInterval(setTime, 1000);
+			</script>
+		</div>
+	</div>
+</div>
+
+<style>
+	.nav-link {
+		color: var(--bs-navbar-brand-color);
+	}
+
+	.nav-link:hover,
+	#date {
+		color: var(--green);
+	}
+
+	.nav-item {
+		border-bottom: 1px solid gray;
+		transition: 0.35s;
+	}
+
+	.nav-item:hover {
+		padding-left: 10px;
+		background-color: var(--bs-secondary-bg-subtle);
+	}
+
+	.nav-item.active {
+		color: var(--yellow);
+		background-color: var(--bs-secondary-bg-subtle);
+		padding-left: 10px;
+	}
+
+	.nav-link > i,
+	.fa-clock {
+		color: var(--red);
+	}
+</style>
