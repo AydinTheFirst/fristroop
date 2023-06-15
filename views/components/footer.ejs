@@ -1,68 +1,43 @@
 <footer class="container-fluid bg-secondary-subtle border-top rounded">
-	<div class="row">
-		<div class="col-12 pt-3 text-center fs-4"><%- include("brand.ejs") %></div>
-		<div class="col-md-6"></div>
-		<div class="col-12 text-center p-3 mt-2">
-			<div class="row fs-4 social">
-				<div class="col-md-6 row d-flex mx-auto">
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-discord"></i>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-instagram"></i>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-youtube"></i>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-tiktok"></i>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-twitter"></i>
-						</a>
-					</div>
-					<div class="col">
-						<a href="#">
-							<i class="fa-brands fa-github"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-12 bg-dark-subtle border-top p-3">
-			<div class="row g-2">
-				<div class="col-md">
-					<a href="/" class="text-decoration-none text-info text-nowrap">
-						Copyright 2023 | Fristroop
-					</a>
-				</div>
-				<div class="col-md text-end">All rights reserved.</div>
-			</div>
-		</div>
-	</div>
+  <div class="row ">
+    <div class="col-12 text-center p-3 mt-2">
+      <div class="row fs-4 social">
+        <div class="col-md-6 d-flex mx-auto justify-content-between">
+          <a href="#">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
-	footer {
-		animation: borderAnim 3s infinite;
-	}
+  footer {
+    animation: borderAnim 3s infinite;
+  }
 
-	.social a {
-		color: var(--bs-brand-color);
-		border-bottom: var(--bs-border-width) var(--bs-border-style)
-			var(--bs-border-color) !important;
-	}
+  .social a {
+    color: var(--bs-brand-color);
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
 
-	.social a:hover {
-		color: var(--green);
-	}
+  .social a:hover {
+    color: #fff;
+  }
 </style>

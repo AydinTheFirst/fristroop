@@ -1,6 +1,19 @@
-<div id="brand">
+<div class="brand">
 	<a class="navbar-brand" href="/">
 		<img src="imgs/logo.png" width="40" alt="" class="logo" />
 		<span class="brand-title">Fristroop</span>
 	</a>
 </div>
+
+<style>
+	.logo {
+		animation: 5s flip infinite;
+	}
+
+	.brand-title {
+		background: linear-gradient(to right, var(--gradient));
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>

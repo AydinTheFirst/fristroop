@@ -1,73 +1,63 @@
-<div
-	class="bg-secondary-subtle rounded-bottom border-bottom border-dark-subtle"
-	id="navbar">
-	<nav class="navbar mt-1 rounded">
-		<div class="container-fluid flex-nowrap">
-			<div>
-				<button
-					class="btn fs-5"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#sidebar"
-					aria-controls="sidebar">
-					<i class="fa-solid fa-bars green"></i>
-				</button>
-			</div>
+<div class="bg-secondary-subtle rounded-bottom border-bottom border-dark-subtle" id="navbar">
+  <nav class="navbar mt-1 rounded">
+    <div class="container-fluid flex-nowrap">
 
-			<%- include("brand.ejs") %>
+      <div>
+        <button class="btn fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
-			<div class="d-flex flex-nowrap">
-				<button
-					class="btn fs-5"
-					id="collUserBtn"
-					data-bs-toggle="collapse"
-					data-bs-target="#collUser"
-					aria-expanded="true"
-					aria-controls="collUser">
-					<i class="fa-solid fa-user green"></i>
-				</button>
+      <div id="brand">
+        <a class="navbar-brand" href="/">
+          <img src="imgs/logo.png" width="40" alt="" class="logo" />
+          <span class="brand-title">Fristroop</span>
+        </a>
+      </div>
 
-				<div class="collapse collapse-horizontal navbar-collapse" id="collUser">
-					<div class="d-flex flex-nowrap mt-1 mx-1 grid gap-1">
-						<button class="btn btn-primary text-nowrap">Sign Up</button>
-						<button class="btn btn-success text-nowrap">Log In</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+      <div class="d-flex flex-nowrap">
+        <button class="btn fs-5" id="collUserBtn" data-bs-toggle="collapse" data-bs-target="#collUser" aria-expanded="true" aria-controls="collUser">
+          <i class="fa-solid fa-user"></i>
+        </button>
+
+        <div class="collapse collapse-horizontal navbar-collapse" id="collUser">
+          <div class="d-flex flex-nowrap mt-1 mx-1 grid gap-1">
+            <button class="btn btn-primary btn-sm text-nowrap">Sign Up</button>
+            <button class="btn btn-success  btn-sm text-nowrap">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <script>
-	window.addEventListener("DOMContentLoaded", () => {
-		const navbar = document.getElementById("navbar");
-		const height = navbar.offsetHeight;
-		document.body.style.paddingTop = height + "px";
-	});
+  window.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const height = navbar.offsetHeight;
+    document.body.style.paddingTop = height + "px";
+  });
 
-	const brand = document.getElementById("brand");
+  const brand = document.getElementById("brand");
 
-	document.getElementById("collUserBtn").onclick = () => {
-		if (window.innerWidth >= 450) return;
+  document.getElementById("collUserBtn").onclick = () => {
+    if (window.innerWidth >= 450) return;
 
-		if (!brand.classList.contains("d-none")) {
-			brand.classList.toggle("d-none");
-		} else {
-			setTimeout(() => {
-				brand.classList.toggle("d-none");
-			}, 350);
-		}
-	};
+    if (!brand.classList.contains("d-none")) {
+      brand.classList.toggle("d-none");
+    } else {
+      setTimeout(() => {
+        brand.classList.toggle("d-none");
+      }, 350);
+    }
+  };
 </script>
 
 <style>
-	#navbar {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		animation: borderAnim 3s infinite;
-	}
-
-
-
+  #navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    animation: borderAnim 3s infinite;
+  }
 </style>

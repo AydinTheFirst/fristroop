@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include("components/head.ejs") %>
-	<body data-bs-theme="dark">
-		<!-- Include sidebar -->
-		<%- include("components/sidebar.ejs") %>
+<%- include("components/head.ejs") %>
+<script src="js/stars.js" defer></script>
+<body data-bs-theme="dark">
+  <!-- Include sidebar -->
+  <%- include("components/sidebar.ejs") %>
 
-		<!-- Include Navbar -->
-		<%- include("components/navbar.ejs") %>
+  <!-- Include Navbar -->
+  <%- include("components/navbar.ejs") %>
+  <canvas></canvas>
 
-		<!-- Main Content -->
-		<div class="container-fluid p-4 rounded">
-			<div class="row bg-dark-subtle rounded" style="height: 100vh">x</div>
-		</div>
+  <!-- Main Content -->
+  <div class="container-fluid my-3" style="min-height: 100vh;">
 
-		<!-- Footer -->
-		<%- include("components/footer.ejs") %>
+  </div>
 
-		<!-- Theme Changer -->
-		<%- include("components/changeTheme.ejs") %>
+  <!-- Footer -->
+  <%- include("components/footer.ejs") %>
 
-		<%- include("components/contact.ejs") %>
-	</body>
+  <%- include("components/contact.ejs") %>
+</body>
+
 </html>

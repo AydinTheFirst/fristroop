@@ -1,52 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Rubik+Pixels&display=swap");
 
 :root {
-	--red: #ff0000;
-	--orange: #ff9900;
-	--yellow: #ffff00;
-	--green: #00f000;
-	--aqua: #00ffff;
-	--blue: #0000ff;
-	--purple: #9900ff;
-	--pink: #ff00ff;
-	--gradient: var(--green), var(--yellow), var(--orange), var(--red);
+  --red: #ff0000;
+  --orange: #ff9900;
+  --yellow: #ffff00;
+  --green: #00f000;
+  --aqua: #00ffff;
+  --blue: #0000ff;
+  --purple: #9900ff;
+  --pink: #ff00ff;
+  --gradient: var(--green), var(--yellow), var(--orange), var(--red);
 }
 
 body {
-	font-family: "Bruno Ace", cursive;
-	min-height: 100vh;
+  position: relative;
+  font-family: "Bruno Ace", cursive;
+  overflow-y: auto;
 }
-
-::-webkit-scrollbar {
-	width: 0;
-}
-
-.green {
-	color: var(--green);
-}
-
-.logo {
-	animation: 5s flip infinite;
-}
-
-.brand-title {
-	background: linear-gradient(to right, var(--gradient));
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 
 @keyframes borderAnim {
-	0% {
-		border-image: linear-gradient(to right, var(--green), var(--red)) 1;
-	}
+  0% {
+    border-image: linear-gradient(to right, var(--green), var(--red)) 1;
+  }
 
-	50% {
-		border-image: linear-gradient(to right, var(--red), var(--green)) 1;
-	}
+  50% {
+    border-image: linear-gradient(to right, var(--red), var(--green)) 1;
+  }
 
-	100% {
-		border-image: linear-gradient(to right, var(--green), var(--red)) 1;
-	}
+  100% {
+    border-image: linear-gradient(to right, var(--green), var(--red)) 1;
+  }
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
