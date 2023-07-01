@@ -88,4 +88,4 @@ const draw = () => {
   entities.map((e) => e.draw());
 };
 
-setInterval(draw, 1000 / 60);
+//setInterval(draw, 1000 / 60);
